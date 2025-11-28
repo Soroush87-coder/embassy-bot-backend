@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: embassy-bot-backend
+    env: node
+    plan: free
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: WORKFLOW_ID
+        sync: false
